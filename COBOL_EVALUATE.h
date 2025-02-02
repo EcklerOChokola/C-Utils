@@ -3,9 +3,11 @@
 
 #define EVALUATE(X) switch(X) {
 #define WHEN(X,Y) case (X):\
-	Y; break;
+	{ Y; }\
+	break;
 #define WHEN_OTHER(X) default:\
-	X; break;
+	{ X; }\
+	break;
 #define END_EVALUATE }
 
 #endif
