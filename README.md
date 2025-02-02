@@ -31,7 +31,7 @@ To do this, you first need to write the following statement at the top of your f
 
 You then have to initialise the runtime to use the console. You can do this by using the `init_console` function
 
-After using the console, you need to drop the runtime to avoid multiple Javascript runtimes. Just use the `drop_console` function to achieve this
+After using the console, you need to drop the runtime to avoid multiple Javascript runtimes. Just use the `destroy_console` function to achieve this
 
 **Example**
 
@@ -53,7 +53,7 @@ Result(Unit, Any) main(Unit)
     console.warn("%d\n", test);
     // [WARNING] - 8
 
-    drop_console();
+    destroy_console(); // Destroys the Javascript runtime
     Ok()
 }
 ```
