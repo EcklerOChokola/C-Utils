@@ -7,7 +7,7 @@ C utilities to make C more accessible modern software developers and ship :rocke
 This library provides simple quality of life improvements, such as:
 
 - Golang-like error handling (with the "goerr.h" header file) :star_struck: 
-- Rust\* inspired Result type (with the "rust_result.h" header file) :crab: 
+- Rust\* inspired Result type and integer types (with the "rust_result.h" and "rust_inttypes.h" header files) :crab: 
 - COBOL-type EVALUATE statement (with the "COBOL_EVALUATE.h" header file) :card_file_box: 
 - Kotlin `Unit` and `Any` types (with the "kotlinUnitAny.h" header file) :seedling:
 - Java inspired `new` statement (with the "JavaNew.h" header file) :technologist:

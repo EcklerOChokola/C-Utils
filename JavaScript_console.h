@@ -38,9 +38,10 @@ Unit Log(char* pattern, va_list args)
 	size_t pattern_len = strlen(pattern); \
 	char* warn = X; \
 	size_t warn_len = strlen(pattern); \
-	char* new_pattern = malloc(sizeof(char) * (warn_len + pattern_len + 1)); \
+	char* new_pattern = malloc(sizeof(char) * (warn_len + pattern_len + 2)); \
 	strcpy(new_pattern, warn); \
-	strcat(new_pattern, pattern)
+	strcat(new_pattern, pattern); \
+	strcat(new_pattern, "\n")
 
 #define call_log_with_pattern(X) \
 	va_list rest; \
@@ -49,7 +50,8 @@ Unit Log(char* pattern, va_list args)
 
 Unit log_impl(char* pattern, ...)
 {
-	call_log_with_pattern(pattern);
+	create_new_pattern("");
+	call_log_with_pattern(new_pattern);
 }
 
 Unit warn_impl(char* pattern, ...)

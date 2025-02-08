@@ -8,5 +8,6 @@
 #include"kotlinUnitAny.h"
 #include"JavaNew.h"
 #include"JavaScript_console.h"
+#include"rust_inttypes.h"
 
 #endif
