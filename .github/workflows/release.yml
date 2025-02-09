@@ -21,10 +21,6 @@ jobs:
           repository: 'C-Utils'
       - name: Move C-Utils to c_utils for path matching
         run: mv C-Utils c_utils
-      - name: List files in current directory so i don't get cray
-        run: ls -liah
-      - name: Build executable
-        run: bash build
       - name: Publish tag and release
         id: create_tag_and_release
         uses: rymndhng/release-on-push-action@master
@@ -33,11 +29,3 @@ jobs:
         with:
           bump_version_scheme: minor
           release_name: ':rocket: Version <RELEASE_VERSION>'
-      - name: Upload built binary
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_tag_and_release.outputs.upload_url }}
-          asset_path: ./pbm_dither_gen
-          asset_name: pbm_dither_gen
