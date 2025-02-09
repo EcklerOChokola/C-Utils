@@ -28,4 +28,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           bump_version_scheme: patch
-          release_name: '🚀Version <RELEASE_VERSION>'
+          release_name: '🚀 Version <RELEASE_VERSION>'
