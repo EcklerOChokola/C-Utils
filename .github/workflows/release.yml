@@ -21,6 +21,8 @@ jobs:
           repository: 'C-Utils'
       - name: Move C-Utils to c_utils for path matching
         run: mv C-Utils c_utils
+      - name: List files in current directory so i don't get cray
+        run: ls -liah
       - name: Build executable
         run: bash build
       - name: Publish tag and release
