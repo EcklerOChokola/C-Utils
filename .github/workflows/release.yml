@@ -22,7 +22,7 @@ jobs:
       - name: Move C-Utils to c_utils for path matching
         run: mv C-Utils c_utils
       - name: Build executable
-        run: ./build
+        run: bash build
       - name: Publish tag and release
         id: create_tag_and_release
         uses: rymndhng/release-on-push-action@master
