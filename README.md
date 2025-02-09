@@ -14,9 +14,22 @@ This library provides simple quality of life improvements, such as:
 - For our python users, use drop instead of free (with the "DropForFree.h" header file) :snake:
 - most used Javascript console functions, such as `console.log`, `console.error` and many more! (with the "JavaScript_console.h" header file) :desktop_computer:
 
+## :chains: Install and linking :chains:
+
+To install this library, you can simply run these commands:
+
+```bash
+git clone git@github.com:EcklerOChokola/C-Utils.git
+./install
+```
+
+The install script will put all the header files in the `/usr/local/include/c_utils` directory (this will necessitate super user permissions)
+
+If you want to install them elsewhere, simply edit the `locatio` variable at the top of the script, or you can copy the files to the desired location
+
 ## :wrench: Use :wrench:
 
-Obviously, all these libraries can be used either separately, or by including the "libs.h" header file, which includes everything you'll need to code :zap: blazingly fast :zap: 
+Obviously, all these libraries can be used either separately, or by including the "c_utils/libs.h" header file, which includes everything you'll need to code :zap: blazingly fast :zap: 
 
 ## Special cases :bangbang:
 

@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+
+location="/usr/local/include/c_utils"
+
+echo "Installing to $location"
+
+sudo cp ./*.h $location
+
+echo "Successfully installed!"
